@@ -4,7 +4,8 @@ const userSchema=new mongoose.Schema({
     username:{
         type:String,
         required:true,
-        trim:true
+        trim:true,
+        unique:true
     },
     email:{
         type:String,
@@ -14,9 +15,9 @@ const userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:true,
-    }
+    },
+    tasks:[{ Title:{type:String,default:"new task"} , date:{type:String,default:new Date(Date.now()).toString()}}]
 })
 
-const userModel=mongoose.model("users",userSchema);
-
-export default userModel
+const User=mongoose.model("users",userSchema);
+export default User;

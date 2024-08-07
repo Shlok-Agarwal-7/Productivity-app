@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import User from "./Models/UserModel.js";
 
 //middleware
 const app = express();
@@ -16,6 +17,8 @@ mongoose
   .catch((e) => {
     console.log(e);
   });
+
+
 
 app.listen(4000, () => {
   console.log("server is up");
