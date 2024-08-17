@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import AuthRoutes from "./Routes/AuthRoutes.js";
+import ProjectRoutes from "./Routes/ProjectRoutes.js"
 import { errorMiddleware } from "./Middleware/Error.js";
 dotenv.config();
 //middleware
@@ -15,6 +16,7 @@ app.use(cookieParser())
 
 //routes
 app.use("/auth",AuthRoutes)
+app.use("/project",ProjectRoutes)
 
 
 

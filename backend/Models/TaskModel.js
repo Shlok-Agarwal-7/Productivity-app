@@ -23,7 +23,11 @@ const taskSchema=new mongoose.Schema({
     project:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Project"
-
+    },
+    status: {
+        type: String,
+        enum: ['pending', 'in-progress', 'completed'],
+        default: 'pending'
     },
     createdAt:{
         type: Date,
