@@ -15,9 +15,8 @@ const userSchema=new mongoose.Schema({
     password:{
         type:String,
         required:true,
-    },
-    tasks:[{ Title:{type:String,default:"new task"} , date:{type:String,default:new Date(Date.now()).toString()}}]
+    }
 })
 
-const User=mongoose.model("users",userSchema);
+const User=mongoose.model("User",userSchema);
 export default User;
