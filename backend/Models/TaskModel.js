@@ -8,7 +8,7 @@ const taskSchema=new mongoose.Schema({
     },
     description:{
         type:String,
-        required:true,
+        default:"Add details about task"
     },
     dueDate:{
         type:Date,
@@ -25,14 +25,9 @@ const taskSchema=new mongoose.Schema({
         ref:"Project"
     },
     status: {
-        type: String,
-        enum: ['pending', 'in-progress', 'completed'],
-        default: 'pending'
+        type: Boolean,
+        default: false
     },
-    createdAt:{
-        type: Date,
-        default:Date.now
-    }
 
 })
 

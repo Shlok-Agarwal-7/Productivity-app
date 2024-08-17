@@ -8,7 +8,8 @@ const projectSchema=new mongoose.Schema({
     },
     description:{
         type:String,
-        required:true,
+        trim:true,
+        default:"Add Details about project"
     },
     dueDate:{
         type:Date,
@@ -21,6 +22,8 @@ const projectSchema=new mongoose.Schema({
     }
 
 })
+
+projectSchema.index({ user: 1, name: 1 }, { unique: true });
 
 const Project=mongoose.model("Project",projectSchema);
 export default Project;

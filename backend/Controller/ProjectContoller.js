@@ -17,6 +17,9 @@ export const newProjectController =async(req,res,next)=>{
             message:"Project added successfully"
         })
     } catch (error) {
+      if (error.code === 11000) {
+        return res.status(400).json({ success:false, message: 'Project name already exists for this user' });
+    }
         next(error)    
     }
 }
