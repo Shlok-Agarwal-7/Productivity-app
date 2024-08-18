@@ -41,6 +41,21 @@ export const deleteProjectContoller=async(req,res,next)=>{
   }
     }
 
+    export const getProjectsContoller=async(req,res,next)=>{
+      try {
+        const userid = req.user._id;
+    
+        const projects = await Project.find({ user: userid });
+    
+        res.status(200).json({
+          success: true,
+          projects,
+        });
+      } catch (error) {
+        next(error);
+      }
+    };
+
 
 
 
