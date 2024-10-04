@@ -5,7 +5,6 @@ import Register from "./pages/Register";
 import Calender from "./pages/Calender";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import NavBar from "./components/NavBar";
 
 function App() {
   return (

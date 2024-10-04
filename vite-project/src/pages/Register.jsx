@@ -1,9 +1,7 @@
 import React from "react";
-import { FaRegEnvelope } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
-import { CiLock } from "react-icons/ci";
 import { useState } from "react";
 import logo from "../assets/logo.webp";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -67,7 +65,7 @@ const Register = () => {
                 Password
               </label>
             </div>
-            <div className="mt-2">
+            <div>
               <input
                 id="password"
                 name="password"
@@ -88,15 +86,17 @@ const Register = () => {
             </button>
           </div>
         </form>
-        <p className="mt-10 text-center text-sm text-gray-500">
-          already a member?
-          <Link
-            to="/login"
-            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-          >
-            Login
-          </Link>
-        </p>
+        <div>
+        <p className=" mt-10 text-center text-sm text-gray-500">
+            Not a member?{" "}
+            <Link
+              to="/register"
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Register
+            </Link>
+          </p>
+          </div>
       </div>
     </div>
   );
