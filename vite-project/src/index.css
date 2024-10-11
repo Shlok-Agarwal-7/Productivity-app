@@ -22,3 +22,11 @@
     opacity: 0;
     animation-fill-mode: forwards;
   }
+
+  .dark{
+    background-color: #18191A;
+  }
+
+  .light{
+    background-color: #242526;
+  }

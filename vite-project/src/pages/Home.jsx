@@ -76,8 +76,8 @@ export default function LandingPage() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FeatureCard 
-                title="AI-Powered Insights" 
-                description="Leverage cutting-edge AI to gain valuable insights and boost productivity."
+                title="Oraginize Workflows" 
+                description="Use the projects feature to group tasks into one"
               />
               <FeatureCard 
                 title="Seamless Integrations" 
