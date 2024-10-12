@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Calender from "./Calender";
 import Projects from "./Projects";
+import Tasks from "./tasks";
 
 const DashBoard = () => {
   return (
@@ -21,8 +22,8 @@ const DashBoard = () => {
               <FaBars className="text-2xl mx-5 my-5" />
             </label>
           </div>
-          <div className="dark">
-          <Projects />
+          <div className="dark justify-items-center">
+          <Tasks/>
           </div>
         </div>
         <div className="drawer-side">
